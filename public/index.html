@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="theme-color" content="#090909" />
+  <title>Mono — Music, uninterrupted</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="/styles.css" />
+</head>
+<body><div class="app-shell">
+  <aside class="sidebar"><a class="brand" href="#"><span class="brand-mark">m.</span><span>mono</span></a><div class="side-label">LIBRARY</div>
+    <nav><button class="nav-item active" data-view="discover"><span>⌂</span> Discover</button><button class="nav-item" data-view="search"><span>⌕</span> Search</button><button class="nav-item" data-view="recent"><span>◷</span> Recently played</button></nav>
+    <div class="side-label playlists-label">YOUR COLLECTION</div><div class="empty-library">Your library will show up here.</div>
+    <div class="sidebar-bottom"><div class="tidal-status"><span class="status-dot"></span><span id="connection-label">TIDAL API not configured</span></div><a href="https://developer.tidal.com/" target="_blank" rel="noreferrer">Developer portal ↗</a></div>
+  </aside>
+  <main class="main"><header class="topbar"><div class="crumb">YOUR SPACE <span>/</span> <b id="page-name">DISCOVER</b></div><div class="top-actions"><button class="icon-btn" id="theme-btn" aria-label="Toggle theme">◐</button><a class="tidal-pill" href="https://tidal.com/" target="_blank" rel="noreferrer"><span class="tidal-diamond">◆</span> TIDAL</a></div></header>
+    <section class="hero" id="discover-view"><div class="eyebrow"><span class="live-dot"></span> A QUIETER WAY TO LISTEN</div><h1>Music, without<br><span>the noise.</span></h1><p class="hero-copy">A minimal home for the music you love.<br>Search the TIDAL catalogue and settle in.</p><button class="primary-btn" id="hero-search">Explore music <span>↗</span></button><div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div><div class="hero-grain"></div></section>
+    <section class="content-section"><div class="section-heading"><div><div class="eyebrow muted">START HERE</div><h2>Find your next favorite.</h2></div><span class="section-index">01 — SEARCH</span></div>
+      <form class="search-box" id="search-form"><span class="search-symbol">⌕</span><input id="search-input" type="search" placeholder="Search tracks, artists, albums..." autocomplete="off" /><kbd>ENTER ↵</kbd></form>
+      <div class="results-head"><span id="results-label">A LITTLE INSPIRATION</span><span id="result-count"></span></div><div class="results" id="results"><div class="welcome-card"><div class="welcome-icon">♫</div><div><strong>Your soundtrack starts here.</strong><p>Search the TIDAL catalogue to find a track.</p></div></div></div>
+    </section><footer><span>MONO / PERSONAL MUSIC SPACE</span><span>INDEPENDENT PROJECT · NOT AFFILIATED WITH TIDAL</span></footer>
+  </main>
+  <aside class="right-rail"><div class="rail-top"><span class="eyebrow muted">NOW PLAYING</span><span class="rail-dots">···</span></div><div class="now-art" id="now-art"><div class="art-placeholder">m.</div></div>
+    <div class="now-meta"><div class="now-title" id="now-title">Nothing playing</div><div class="now-artist" id="now-artist">Choose a track to begin</div></div>
+    <div class="embed-wrap" id="embed-wrap"><div class="embed-hint">Select a search result to load the official TIDAL player here.</div></div>
+    <div class="queue-head"><span class="eyebrow muted">UP NEXT</span><span class="queue-count" id="queue-count">0 TRACKS</span></div><div class="queue-empty" id="queue-empty">Your queue is looking<br>pretty quiet.</div><div class="queue-list" id="queue-list"></div>
+    <div class="rail-note"><span class="tidal-diamond">◆</span><span>Playback is provided by TIDAL's official embedded player.</span></div>
+  </aside>
+</div><script src="/app.js"></script></body></html>
